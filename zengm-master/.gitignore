@@ -1,0 +1,15 @@
+*~
+*.pyc
+*.sublime-project
+*.sublime-workspace
+node_modules
+test_case.html
+npm-debug.log
+build
+yarn-error.log
+local.log
+stats-*.html
+.idea/
+foo
+.vscode
+src/worker/ajvHack/esbuild.js

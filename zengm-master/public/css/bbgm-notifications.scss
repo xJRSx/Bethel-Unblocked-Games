@@ -1,0 +1,127 @@
+.notification-container {
+	z-index: 2000;
+
+	ul,
+	li {
+		padding: 0;
+		margin: 0;
+	}
+
+	ul {
+		position: fixed;
+		right: 6px;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		justify-content: flex-end;
+		pointer-events: none;
+	}
+}
+
+.notification-container-extra-margin-bottom {
+	ul {
+		bottom: 40px;
+	}
+}
+.trade-extra-margin-bottom {
+	margin-bottom: 40px;
+}
+
+.notification-close-all {
+	// Use this rather than opacity to set transpacency so it doesn't affect button children
+	background-color: rgba(0, 0, 0, 0.8);
+
+	border-radius: 3px;
+	box-shadow: #999 0 0 12px;
+	color: rgba(255, 255, 255, 0.7); // Match normal close button
+
+	&:hover {
+		box-shadow: #000 0 0 12px;
+		color: #fff;
+		background-color: rgba(0, 0, 0, 1);
+	}
+
+	font-size: 20px;
+
+	border-width: 0px;
+
+	position: fixed;
+	right: 312px;
+	bottom: 6px;
+
+	width: 31px;
+	height: 31px;
+}
+
+.notification {
+	// Use this rather than opacity to set transpacency so it doesn't affect button children
+	background-color: rgba(0, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.8);
+
+	border-radius: 3px;
+	box-shadow: #999 0 0 12px;
+	margin: 0 0 6px;
+	padding: 6px 12px;
+	pointer-events: auto;
+	position: relative;
+	width: 300px;
+	z-index: 1000;
+
+	&:hover {
+		box-shadow: #000 0 0 12px;
+		background-color: rgba(0, 0, 0, 1);
+	}
+
+	a {
+		// Decrease saturation by 30, increase value by 10
+		color: #a5c7e3;
+
+		&:hover {
+			// Decrease saturation by 30, increase value by 10
+			color: #a5c7e3;
+		}
+	}
+}
+
+.notification .notification-close {
+	font-size: 20px;
+	background: transparent;
+	border: 0;
+	color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+	padding: 0 7px;
+	float: right;
+	margin-top: -6px;
+	margin-right: -12px;
+	margin-left: 12px;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
+// Colors are arbitrary, just whatever looks good
+
+.notification-danger {
+	color: #fff;
+	background-color: darkred;
+
+	&:hover {
+		background-color: darken(darkred, 5%);
+	}
+}
+
+.notification-primary {
+	color: #fff;
+	background-color: #0055a0;
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}

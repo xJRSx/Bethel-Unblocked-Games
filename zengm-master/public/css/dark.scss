@@ -1,0 +1,335 @@
+// These are so clicking on an element in one of the top navbar dropdown lists does not flash blue
+$dropdown-link-active-color: #fff; // Matches hover
+$dropdown-link-active-bg: #343a40; // Matches hover: $gray-100
+
+// For datatable.scss
+$sorting-highlight-bg: #424549; // Matches var(--bs-table-hover-bg) but without transparency, which is needed for sticky-x
+
+$white: #212529;
+$gray-100: #343a40;
+$gray-200: #495057;
+$gray-300: #6c757d;
+$gray-400: #adb5bd;
+$gray-500: #ced4da;
+$gray-600: #dee2e6;
+$gray-700: #e9ecef;
+$gray-800: #f8f9fa;
+$gray-900: #f8f9fa;
+$black: #fff;
+$blue: lighten(#007bff, 25);
+$indigo: lighten(#6610f2, 20);
+$purple: lighten(#6f42c1, 20);
+$pink: lighten(#e83e8c, 20);
+$red: #dc3545;
+$orange: lighten(#fd7e14, 10);
+$yellow: lighten(#ffc107, 20);
+$green: lighten(#28a745, 10);
+$teal: lighten(#20c997, 20);
+$cyan: lighten(#17a2b8, 20);
+
+$primary: $orange;
+$secondary: $gray-400;
+$text-muted: $gray-400;
+
+$table-bg-scale: 70%;
+$table-hover-bg-factor: 0.1;
+
+$alert-bg-scale: 70%;
+$alert-border-scale: 60%;
+
+$list-group-item-bg-scale: 70%;
+
+// Otherwise, it complains about contrast for buttons
+$min-contrast-ratio: 3;
+
+@import "light";
+
+.btn {
+	color: $black;
+
+	&:hover {
+		color: $black;
+	}
+
+	&:disabled {
+		color: $gray-700;
+	}
+}
+.btn-link,
+.btn-link:hover {
+	color: $primary;
+}
+
+.text-danger {
+	color: lighten($red, 10) !important;
+}
+
+.btn-danger {
+	border-color: darken($red, 20);
+	background-color: darken($red, 20);
+
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		border-color: darken($red, 25) !important;
+		background-color: darken($red, 25) !important;
+		color: $black !important;
+	}
+}
+
+// btn-danger dropdown text color while cliking an item
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:not(:disabled):not(.disabled).active,
+.show > .btn-danger.dropdown-toggle {
+	color: $black !important;
+}
+
+.btn-primary {
+	border-color: darken($orange, 25);
+	background-color: darken($orange, 25);
+	color: #fff !important;
+
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		border-color: darken($orange, 30) !important;
+		background-color: darken($orange, 30) !important;
+	}
+}
+
+.btn-secondary {
+	color: $white;
+
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		color: $white !important;
+	}
+
+	&:disabled {
+		color: $gray-200;
+	}
+}
+
+.btn-light-bordered,
+.btn-light-bordered-2 {
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		background-color: $gray-200 !important;
+		color: $black !important;
+	}
+
+	// Both these are needed for disabled buttons, for some reason
+	color: $black !important;
+	&:disabled {
+		color: $black !important;
+	}
+}
+
+.bg-danger {
+	background-color: darken($red, 20) !important;
+}
+
+.bg-danger,
+.bg-darkblue,
+.bg-primary,
+.bg-success {
+	color: $black !important;
+}
+.bg-warning,
+.bg-orange,
+.bg-info {
+	color: $white !important;
+}
+
+.notification,
+.notification-close-all {
+	box-shadow: #444 0 0 12px;
+}
+
+.god-mode,
+.sidebar a.god-mode,
+select.god-mode:focus {
+	background-color: darken($purple, 20);
+	color: $black;
+}
+a.god-mode,
+.sidebar a.god-mode {
+	&:hover {
+		background-color: darken($purple, 10);
+		color: $black;
+		text-decoration: none;
+	}
+}
+a.god-mode.active {
+	background-color: darken($purple, 10);
+	color: $black;
+}
+.sidebar a.god-mode.active {
+	background-color: darken($purple, 10);
+	color: $primary;
+}
+
+.play-button-success {
+	background-color: darken($green, 20);
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: shade-color(
+			darken($green, 20),
+			$btn-hover-bg-shade-amount
+		);
+	}
+}
+
+.btn-success {
+	border-color: darken($green, 20);
+	background-color: darken($green, 20);
+
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		border-color: darken($green, 25) !important;
+		background-color: darken($green, 25) !important;
+		color: $black !important;
+	}
+}
+.bg-success {
+	background-color: darken($green, 20) !important;
+}
+
+.btn-god-mode {
+	@include button-variant(
+		darken($purple, 20),
+		darken($purple, 20),
+		$black,
+		darken($purple, 27),
+		darken($purple, 27)
+	);
+
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		color: $black !important;
+	}
+}
+
+.btn-outline-god-mode {
+	@include button-variant(darken($purple, 20), $gray-400);
+
+	&:active,
+	&:focus,
+	&:not(:disabled):hover {
+		color: $black !important;
+	}
+}
+
+.alert-god-mode {
+	background-color: darken($purple, 45) !important;
+}
+
+.watch-active,
+.watch-active:hover {
+	color: darken($green, 10);
+}
+
+@keyframes oscillate-bg {
+	0% {
+		background-color: darken($success, 20);
+	}
+
+	50% {
+		background-color: lighten($success, 20);
+	}
+
+	100% {
+		background-color: darken($success, 20);
+	}
+}
+
+table.table thead .sorting::after {
+	opacity: 0.4;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.92;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 0.92;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.dark-select__control {
+	background-color: $white !important;
+}
+.dark-select__control--is-focused {
+	border-color: $primary !important;
+	box-shadow: $primary 0 0 1px !important;
+}
+.dark-select__single-value {
+	color: $black !important;
+}
+.dark-select__input {
+	color: $black !important;
+}
+
+.dark-select__menu-list {
+	background-color: $white !important;
+	color: $black !important;
+}
+.dark-select__indicator svg {
+	color: $gray-300 !important;
+	&:not(:disabled):hover {
+		color: $gray-400 !important;
+	}
+}
+.dark-select__option {
+	background-color: $white !important;
+	color: $black !important;
+}
+.dark-select__option:hover {
+	background-color: $gray-100 !important;
+	color: $black !important;
+}
+
+.modal-backdrop.show {
+	opacity: 0.25; /* otherwise it is blindingly bright */
+}
+
+.new_window {
+	stroke: #fff;
+}
+
+.dropdown-select {
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22100%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M%200%2C0%20L%20100%2C100%20L%20200%2C0%20z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+:root {
+	--gradient-base-danger: #{derive-rgb-values-from-hex(darken($danger, 25%))};
+	--gradient-base-success: #{derive-rgb-values-from-hex(darken($success, 25%))};
+}
+
+.chart-axis {
+	line,
+	path {
+		stroke: lighten($secondary, 10%);
+	}
+
+	text {
+		fill: lighten($secondary, 10%);
+	}
+}
