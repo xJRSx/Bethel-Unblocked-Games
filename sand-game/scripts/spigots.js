@@ -13,7 +13,7 @@ function initSpigots() {
 	const S = SPIGOT_SIZE_OPTIONS[1];
 	for (var I = 0; I !== NUM_SPIGOTS; I++) SPIGOT_SIZES.push(S)
 }
-
+  
 function updateSpigots() {
 	var S, I, T;
 	if (SPIGOTS_ENABLED)
