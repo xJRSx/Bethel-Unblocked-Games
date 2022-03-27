@@ -1,12 +1,71 @@
-/* Generated on: Thu Feb 17 2022 22:04:20 GMT+0000 (Coordinated Universal Time) */
 
 
-/* ==========================================================================
-normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
-========================================================================== */
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(151, 23, 0) 50%, rgb(0, 0, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  
 
 
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 html {
 	font-family: sans-serif;
@@ -2422,6 +2481,7 @@ Start of custom Webflow CSS
 	border-radius: 20px;
 	background-color: #740000;
 }
+/* Fullscreen Button Code */
 .button {
 	border: none;
 	color: white;
