@@ -10,6 +10,12 @@ html {
 
 
 
+  .boxed {
+	border: 7px groove #D60000;
+	margin-left: 450px;
+	margin-right: 450px;
+  }
+
 
 
   a {
