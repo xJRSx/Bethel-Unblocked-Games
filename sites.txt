@@ -12,3 +12,7 @@ https://github.com/htmlgames/htmlgames.github.io
 
 get tab code
 http://freeswfgames.github.io/index.html
+
+
+minifier
+https://kangax.github.io/html-minifier/
