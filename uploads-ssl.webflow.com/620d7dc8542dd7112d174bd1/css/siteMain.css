@@ -7,6 +7,21 @@ html {
   body {
     margin:0;
   }
+
+
+
+
+
+  a {
+	color: #ff0000;
+	text-shadow: -1px -1px 0 rgb(160, 160, 160),1px -1px 0 rgb(117, 114, 114),-1px 1px 0 rgb(117, 117, 117), 1px 1px 0 #000;
+}
+
+
+
+
+
+
   
   .bg {
     animation:slide 3s ease-in-out infinite alternate;
