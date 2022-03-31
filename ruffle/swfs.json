@@ -1,0 +1,26 @@
+{
+  "swfs": [
+    {
+      "location": "swfs/papaspizzeria_v2.swf",
+      "title": "Papa's Pizzeria",
+      "author": "#",
+      "authorLink": "#",
+      "type": "Game"
+    },
+    {
+      "location": "swfs/LearnToFly.swf",
+      "title": "Learn To Fly",
+      "author": "#",
+      "authorLink": "#",
+      "type": "Game"
+    }
+    
+    
+    
+    
+    
+    
+    
+   
+  ]
+}
