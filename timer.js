@@ -32,7 +32,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Timer Expired";
-    document.getElementById("newGame").outerHTML = "<p2>New Game : </p2> <a href='/indexes/tanukiSunset.html'>Tanuki Sunset</a>";
+    document.getElementById("newGame").outerHTML = "<p2>New Game : </p2> <a href='/indexes/shuttleDeck.html'>Shuttle Deck</a>";
 
   }
 }, 1000);
