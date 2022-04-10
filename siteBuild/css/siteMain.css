@@ -48,6 +48,30 @@
   }
 
 
+  .button {
+    border: none;
+    color: #c99e00;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    
+    .button1 {background-color: #8a0000;} /* red */
+    .button2 {background-color: #008CBA;} /* Blue */
+    
+    @media screen and (max-width: 991px) {
+    .cards-grid-container {
+      grid-column-gap: 20px;
+    }
+    }
+
+
+
+
 
 
 
